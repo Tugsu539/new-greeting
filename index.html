@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GameInfo Hub</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">GameInfo<span class="accent">Hub</span></div>
+      <div class="search-wrap">
+        <input id="searchInput" type="search" placeholder="Тоглоом хайх..." />
+      </div>
+      <nav class="nav">
+        <button id="btnAll" class="nav-btn active">Бүх</button>
+        <button id="btnNew" class="nav-btn">Шинэ</button>
+        <button id="btnTop" class="nav-btn">Топ</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="filter">
+        <label for="genreSelect">Төрөл:</label>
+        <select id="genreSelect">
+          <option value="all">Бүгд</option>
+          <option value="Action">Action</option>
+          <option value="RPG">RPG</option>
+          <option value="FPS">FPS</option>
+          <option value="Adventure">Adventure</option>
+        </select>
+      </div>
+
+      <div class="sort">
+        <label for="sortSelect">Эрэмбэлэх:</label>
+        <select id="sortSelect">
+          <option value="popular">Алдартай</option>
+          <option value="rating">Үнэлгээ</option>
+          <option value="newest">Шинэ</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="gamesGrid" class="games-grid">
+      <!-- JS will render cards here -->
+    </section>
+  </main>
+
+  <!-- Game detail modal -->
+  <div id="gameModal" class="modal hidden" role="dialog" aria-modal="true">
+    <div class="modal-content">
+      <button id="closeModal" class="modal-close">X</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">© GameInfo Hub — School project</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
